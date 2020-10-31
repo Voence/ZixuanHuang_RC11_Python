@@ -42,7 +42,7 @@ class ArtMoMA:
             self.imagePath = path
             im.save(path, "JPEG")
 
-artPieces = [80]
+artPieces = []
 with open(r"C:\Users\Voence\desktop\python_work\ZixuanHuang_RC11_Python\CSVfiles\Artworks.csv",newline='',encoding = 'utf-8-sig') as artFile:
     artReader = csv.DictReader(artFile)
 
