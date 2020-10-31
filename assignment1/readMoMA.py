@@ -42,8 +42,8 @@ class ArtMoMA:
             self.imagePath = path
             im.save(path, "JPEG")
 
-artPieces = []
-with open("CSVfiles/Artworks.csv", encoding = 'utf-8-sig') as artFile:
+artPieces = [80]
+with open( "CSVfiles/Artworks.csv",encoding = 'utf-8-sig') as artFile:
     artReader = csv.DictReader(artFile)
 
     for row in artReader:
