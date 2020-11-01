@@ -10,7 +10,7 @@ class ArtMoMA:
         self.depth = depth
         self.height = height
         self.imageUrl = imageUrl
-        self.artist = artist
+        self.artist =artist
         self.imagePath = ''
 
         if self.width:
@@ -38,12 +38,12 @@ class ArtMoMA:
                 im = Image.open(BytesIO(response.content))
             except OSError:
                 return None
-            path = "ArtImages/"+ self.Artist +"_"+self.id +".jpg"
+            path = "C:/Users/Voence/desktop/python_work/ZixuanHuang_RC11_Python/ArtImages/"+ self.artist +"_"+self.id +".jpg"
             self.imagePath = path
             im.save(path, "JPEG")
 
 artPieces = []
-with open(r"C:\Users\Voence\desktop\python_work\ZixuanHuang_RC11_Python\CSVfiles\Artworks.csv",newline='',encoding = 'utf-8-sig') as artFile:
+with open(r"C:\Users\Voence\desktop\python_work\ZixuanHuang_RC11_Python\CSVfiles\Artworks.csv",encoding = 'utf-8-sig') as artFile:
     artReader = csv.DictReader(artFile)
 
     for row in artReader:
